@@ -21,6 +21,7 @@
     height: 100%;
     width: 50%;
     background-color: orange;
+    border-right: 2px solid black;
 }
 button{
     height: 80px;
@@ -29,8 +30,18 @@ button{
     position: absolute;
     margin-top: auto;
     margin-left: auto;
+    background-color: black;
+    color: white;
+    border: none;
+}
+button:hover{
+    color: black;
+   cursor: pointer;
+   transition: 0.9s;
+    background-color: white;
 }
 #right{
+    border-left: 2px solid black;
     font-size: 50px;
     display: flex;
     justify-content: center;
@@ -66,10 +77,13 @@ button{
         flex-direction: column;
     }
     #right{
-        
+        border-left: none ;
         width: 100%;
+        border-bottom: 2px solid black;
     }
     #left{
+        border-right:none ;
+        border-top: 2px solid black ;
         transform: rotate(180deg);
         width: 100%;
     }
