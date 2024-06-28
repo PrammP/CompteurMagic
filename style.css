@@ -3,7 +3,9 @@
     padding: 0;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
-
+.none {
+    display: none;
+}
 .container{
     width: 100vw;
     height: 100vh;
@@ -11,6 +13,66 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
+}
+#p1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: yellow;
+    width: 100%;
+    height: 100%;
+}
+#p2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: orange;
+    width: 100%;
+    height: 100%;
+}
+#p3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: red;
+    width: 100%;
+    height: 100%;
+    
+}
+#p4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: rgb(32, 175, 87);
+    width: 100%;
+    height: 100%;
+    
+}
+#addPlayer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    writing-mode: sideways-rl;
+    padding-left: 5px;
+    position: absolute;
+    margin-left: 200px;
+    height: 40px;
+    width: 40px;
+}
+#subPlayer{
+    padding-left: 5px;
+    writing-mode: sideways-rl;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin-right: 200px;
+    height: 40px;
+    width: 40px;
 }
 
 #left{
@@ -20,8 +82,8 @@
     align-items: center;
     height: 100%;
     width: 50%;
-    background-color: orange;
     border-right: 2px solid black;
+    flex-direction: column;
 }
 button{
     height: 80px;
@@ -33,12 +95,16 @@ button{
     background-color: black;
     color: white;
     border: none;
+    font-size: 40px;
 }
-button:hover{
+button:active{
     color: black;
    cursor: pointer;
-   transition: 0.9s;
+   
     background-color: white;
+}
+button::after{
+    background-color: black;
 }
 #right{
     border-left: 2px solid black;
@@ -49,6 +115,7 @@ button:hover{
     height: 100%;
     width: 50%;
     background-color: yellow;
+    flex-direction: column;
 }
 .lifePointsP1{
     margin:40px;
@@ -68,20 +135,28 @@ button:hover{
 .lifePointsP2{
     margin:40px;
 }
+.lifePointsP3{
+    margin:40px;
+}
+.lifePointsP4{
+    margin:40px;
+}
 
 @media (max-width: 480px) {
     button{
-        writing-mode: vertical-lr;
+        writing-mode: vertical-rl;
     }
     .container{
         flex-direction: column;
     }
     #right{
+        flex-direction: row;
         border-left: none ;
         width: 100%;
         border-bottom: 2px solid black;
     }
     #left{
+        flex-direction: row;
         border-right:none ;
         border-top: 2px solid black ;
         transform: rotate(180deg);
