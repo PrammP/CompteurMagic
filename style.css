@@ -13,7 +13,7 @@
     flex-direction: row;
 }
 
-.left{
+#left{
     font-size: 50px;
     display: flex;
     justify-content: center;
@@ -22,8 +22,15 @@
     width: 50%;
     background-color: orange;
 }
-
-.right{
+button{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: auto;
+    margin-left: auto;
+}
+#right{
     font-size: 50px;
     display: flex;
     justify-content: center;
@@ -52,15 +59,17 @@
 }
 
 @media (max-width: 480px) {
-
+    button{
+        writing-mode: vertical-lr;
+    }
     .container{
         flex-direction: column;
     }
-    .right{
+    #right{
         
         width: 100%;
     }
-    .left{
+    #left{
         transform: rotate(180deg);
         width: 100%;
     }
