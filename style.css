@@ -34,6 +34,33 @@
 .lifePointsP1{
     margin:40px;
 }
+.sub1{
+    cursor: pointer;
+}
+.sub2{
+    cursor: pointer;
+}
+.add1{
+    cursor: pointer;
+}
+.add2{
+    cursor: pointer;
+}
 .lifePointsP2{
     margin:40px;
+}
+
+@media (max-width: 480px) {
+
+    .container{
+        flex-direction: column;
+    }
+    .right{
+        writing-mode: vertical-rl;
+        width: 100%;
+    }
+    .left{
+        writing-mode: vertical-rl;
+        width: 100%;
+    }
 }
