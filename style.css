@@ -76,11 +76,11 @@ button:active {
 button::after {
     background-color: black;
 }
-.lifePointsP1, .lifePointsP2, .lifePointsP3, .lifePointsP4 {
-    margin: 40px;
-}
+
 .sub1, .sub2, .sub3, .sub4, .add1, .add2, .add3, .add4 {
     cursor: pointer;
+    width: 90%;
+    height: 90%;
 }
 @media (max-width: 480px) {
     button {
