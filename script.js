@@ -28,16 +28,18 @@ function updateDisplay() {
 }
 
 function updatePlayers(nbOfPlayers) {
-  if (nbOfPlayers == 2) {
-    player3.classList.add("none");
-    player4.classList.add("none");
-  } else if (nbOfPlayers == 3) {
-    player3.classList.remove("none");
-    player4.classList.add("none");
-  } else {
-    player3.classList.remove("none");
-    player4.classList.remove("none");
+  console.log(`Nombre de joueur : ${nbOfPlayers}`);
+  if (nbOfPlayers === 2) {
+    player3.style.display = "none";
+    player4.style.display = "none";
+  } else if (nbOfPlayers === 3) {
+    player3.style.display = "flex";
+    player4.style.display = "none";
+  } else if (nbOfPlayers === 4) {
+    player3.style.display = "flex";
+    player4.style.display = "flex";
   }
+
   updateDisplay();
 }
 

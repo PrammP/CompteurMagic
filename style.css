@@ -1,12 +1,12 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .none {
     display: none;
 }
-.container{
+.container {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -14,151 +14,91 @@
     align-items: center;
     flex-direction: row;
 }
-#p1{
+#p1, #p2, #p3, #p4 {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    background-color: yellow;
     width: 100%;
     height: 100%;
 }
-#p2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    background-color: orange;
-    width: 100%;
-    height: 100%;
-}
-#p3{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    background-color: red;
-    width: 100%;
-    height: 100%;
-    
-}
-#p4{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    background-color: rgb(32, 175, 87);
-    width: 100%;
-    height: 100%;
-    
-}
-#addPlayer{
+#p1 { background-color: yellow; }
+#p2 { background-color: orange; }
+#p3 { background-color: red; }
+#p4 { background-color: rgb(32, 175, 87); }
+#addPlayer, #subPlayer {
     display: flex;
     justify-content: center;
     align-items: center;
     writing-mode: sideways-rl;
     padding-left: 5px;
     position: absolute;
+    height: 40px;
+    width: 40px;
+}
+#addPlayer {
     margin-left: 200px;
-    height: 40px;
-    width: 40px;
 }
-#subPlayer{
-    padding-left: 5px;
-    writing-mode: sideways-rl;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
+#subPlayer {
     margin-right: 200px;
-    height: 40px;
-    width: 40px;
 }
-
-#left{
+#left, #right {
     font-size: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
     width: 50%;
-    border-right: 2px solid black;
     flex-direction: column;
 }
-button{
+#left {
+    border-right: 2px solid black;
+}
+#right {
+    border-left: 2px solid black;
+    background-color: yellow;
+}
+button {
     height: 80px;
     width: 80px;
     border-radius: 50%;
     position: absolute;
-    margin-top: auto;
-    margin-left: auto;
     background-color: black;
     color: white;
     border: none;
     font-size: 40px;
 }
-button:active{
+button:active {
     color: black;
-   cursor: pointer;
-   
+    cursor: pointer;
     background-color: white;
 }
-button::after{
+button::after {
     background-color: black;
 }
-#right{
-    border-left: 2px solid black;
-    font-size: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 50%;
-    background-color: yellow;
-    flex-direction: column;
+.lifePointsP1, .lifePointsP2, .lifePointsP3, .lifePointsP4 {
+    margin: 40px;
 }
-.lifePointsP1{
-    margin:40px;
-}
-.sub1{
+.sub1, .sub2, .sub3, .sub4, .add1, .add2, .add3, .add4 {
     cursor: pointer;
 }
-.sub2{
-    cursor: pointer;
-}
-.add1{
-    cursor: pointer;
-}
-.add2{
-    cursor: pointer;
-}
-.lifePointsP2{
-    margin:40px;
-}
-.lifePointsP3{
-    margin:40px;
-}
-.lifePointsP4{
-    margin:40px;
-}
-
 @media (max-width: 480px) {
-    button{
+    button {
         writing-mode: vertical-rl;
     }
-    .container{
+    .container {
         flex-direction: column;
     }
-    #right{
+    #right {
         flex-direction: row;
-        border-left: none ;
+        border-left: none;
         width: 100%;
         border-bottom: 2px solid black;
     }
-    #left{
+    #left {
         flex-direction: row;
-        border-right:none ;
-        border-top: 2px solid black ;
+        border-right: none;
+        border-top: 2px solid black;
         transform: rotate(180deg);
         width: 100%;
     }
