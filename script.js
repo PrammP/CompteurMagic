@@ -12,6 +12,7 @@ let sub3 = document.querySelector(".sub3");
 let add3 = document.querySelector(".add3");
 let sub4 = document.querySelector(".sub4");
 let add4 = document.querySelector(".add4");
+let lifePoint = document.getElementById("lifePoint");
 
 let NbLpPlayer1 = parseInt(lpPlayer1.innerText);
 let NbLpPlayer2 = parseInt(lpPlayer2.innerText);
@@ -39,8 +40,21 @@ function updatePlayers(nbOfPlayers) {
     player3.style.display = "flex";
     player4.style.display = "flex";
   }
-
   updateDisplay();
+}
+
+function updateLP() {
+  let gameLP = 0;
+  lifePoint.addEventListener("change", function () {
+    gameLP = lifePoint.value;
+    if (lifePoint.value == "") {
+      gameLP = 20;
+    }
+    lpPlayer1.innerText = gameLP;
+    lpPlayer2.innerText = gameLP;
+    lpPlayer3.innerText = gameLP;
+    lpPlayer4.innerText = gameLP;
+  });
 }
 
 function addPlayer() {
@@ -106,7 +120,9 @@ function reset() {
   NbLpPlayer2 = 20;
   NbLpPlayer3 = 20;
   NbLpPlayer4 = 20;
-  updateDisplay();
+  players = 2;
+  updatePlayers(players);
 }
 
 updatePlayers(players);
+updateLP();

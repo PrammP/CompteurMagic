@@ -30,7 +30,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    writing-mode: sideways-rl;
+    
     padding-left: 5px;
     position: absolute;
     height: 40px;
@@ -68,6 +68,25 @@ button {
     border: none;
     font-size: 40px;
 }
+select {
+display: flex;
+justify-content: center;
+align-items: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding-left: 10px;
+    margin-left: 350px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
 button:active {
     color: black;
     cursor: pointer;
@@ -79,6 +98,9 @@ button::after {
 
 .sub1, .sub2, .sub3, .sub4, .add1, .add2, .add3, .add4 {
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 90%;
     height: 90%;
 }
