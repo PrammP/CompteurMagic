@@ -121,6 +121,7 @@ function reset() {
   NbLpPlayer3 = 20;
   NbLpPlayer4 = 20;
   players = 2;
+  lifePoint.value = "";
   updatePlayers(players);
 }
 
